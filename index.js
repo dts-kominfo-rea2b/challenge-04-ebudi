@@ -8,7 +8,14 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const createDate = (NewData, index) => {
+  const perSecond = [];
+  for (let i = 0; i < NewData.length; i++) {
+    perSecond.push((new Date(NewData[i]) / 1000).toString());
+  }
+  if (index === undefined ? (result = perSecond.sort((a, b) => a - b) && perSecond.join("-")) : (result = perSecond[index]));
+  return result
+};
 
 // ! JANGAN DIMODIFIKASI
 (() => {
